@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ProcessRowView: View {
     var body: some View {
-        HStack(alignment: .top, spacing: 5) {
+        HStack(alignment: .top, spacing: 15) {
             Image(systemName: "pc")
                 .imageScale(.large)
                 .font(.title)
@@ -26,7 +26,15 @@ struct ProcessRowView: View {
 }
 
 struct ContentView: View {
-    let backgroundColor = LinearGradient(colors: [Color(hue: 241, saturation: 0.35, brightness: 0.34, opacity: 1), Color(hue: 241, saturation: 0.36, brightness: 0.33, opacity: 1), Color(hue: 241, saturation: 0.39, brightness: 0.25, opacity: 1)], startPoint: .topTrailing, endPoint: .bottomLeading)
+    let backgroundColor = LinearGradient(
+        colors: [
+            Color(hue: 241, saturation: 0.35, brightness: 0.34, opacity: 1),
+            Color(hue: 241, saturation: 0.36, brightness: 0.33, opacity: 1),
+            Color(hue: 241, saturation: 0.39, brightness: 0.25, opacity: 1)
+        ],
+        startPoint: .topTrailing,
+        endPoint: .bottomLeading
+    )
     
     var body: some View {
         VStack {
@@ -66,19 +74,40 @@ struct ContentView: View {
     
     struct PerformanceMetrics: View {
         @State var isButtonTapped: Bool = false
+        let backgroundColor = LinearGradient(
+            colors: [
+                Color(hue: 242, saturation: 0.43, brightness: 0.34, opacity: 1),
+                Color(hue: 242, saturation: 0.41, brightness: 0.35, opacity: 1),
+                Color(hue: 242, saturation: 0.40, brightness: 0.38, opacity: 1)
+            ],
+            startPoint: .bottomLeading,
+            endPoint: .topTrailing
+        )
+        let buttonColor = LinearGradient(
+            colors: [
+                Color(red: 0.58, green: 0.15, blue: 0.8),
+                Color(red: 0.4, green: 0.15, blue: 0.6),
+                Color(red: 0.3, green: 0.15, blue: 0.95)
+            ],
+            startPoint: .topLeading,
+            endPoint: .bottomTrailing)
+        
         var body: some View {
             VStack(alignment: .leading, spacing: 20) {
-                    ProcessRowView()
-                    ProcessRowView()
-                    ProcessRowView()
+                ProcessRowView()
+                ProcessRowView()
+                ProcessRowView()
                 Button() {
                     print("Inside button tapped")
                 } label: {
                     Text("See Specs")
+                        .foregroundColor(.white)
+                        .font(.title2)
+                        .fontWeight(.medium)
                 }
                 .frame(width: 240, height: 40)
                 .padding()
-                .background(Color(hue: 241, saturation: 0.41, brightness: 0.37, opacity: 1))
+                .background(buttonColor)
                 .cornerRadius(20, antialiased: true)
                 .background(
                     RoundedRectangle(cornerRadius: 20, style: .circular)
@@ -91,6 +120,13 @@ struct ContentView: View {
                     print("hola mi boa")
                 }
             }
+            .padding(30)
+            .background(
+                RoundedRectangle(cornerRadius: 30)
+                    .stroke(.black)
+                    .background(backgroundColor)
+                    .cornerRadius(30)
+            )
             
         }
     }
