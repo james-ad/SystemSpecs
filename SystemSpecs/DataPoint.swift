@@ -18,6 +18,7 @@ struct DataPoint: View {
                     .font(.callout)
                 Text(value)
                     .font(.headline)
+                    .foregroundColor(.white)
             }
             .multilineTextAlignment(.center)
             .padding(2)

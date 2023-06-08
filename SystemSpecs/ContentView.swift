@@ -28,9 +28,8 @@ struct ProcessRowView: View {
 struct ContentView: View {
     let backgroundColor = LinearGradient(
         colors: [
-            Color(hue: 241, saturation: 0.35, brightness: 0.34, opacity: 1),
-            Color(hue: 241, saturation: 0.36, brightness: 0.33, opacity: 1),
-            Color(hue: 241, saturation: 0.39, brightness: 0.25, opacity: 1)
+            Color(red: 0.13, green: 0.12, blue: 0.25),
+            Color(red: 0.08, green: 0.08, blue: 0.25)
         ],
         startPoint: .topTrailing,
         endPoint: .bottomLeading
@@ -45,12 +44,15 @@ struct ContentView: View {
                 .clipShape(Circle())
             Text("Hello, world!")
                 .font(.largeTitle)
+                .foregroundColor(.white)
                 .padding(5)
             Text("Hello, world!")
                 .font(.title2)
+                .foregroundColor(.gray)
             ZStack {
                 Text("Software Engineer")
                     .font(.title3)
+                    .foregroundColor(.white)
                     .padding()
                     .background(.blue)
                     .cornerRadius(15, antialiased: true)
@@ -76,21 +78,20 @@ struct ContentView: View {
         @State var isButtonTapped: Bool = false
         let backgroundColor = LinearGradient(
             colors: [
-                Color(hue: 242, saturation: 0.43, brightness: 0.34, opacity: 1),
-                Color(hue: 242, saturation: 0.41, brightness: 0.35, opacity: 1),
-                Color(hue: 242, saturation: 0.40, brightness: 0.38, opacity: 1)
+                Color(red: 0.17, green: 0.15, blue: 0.42),
+                Color(red: 0.12, green: 0.1, blue: 0.25)
             ],
-            startPoint: .bottomLeading,
-            endPoint: .topTrailing
+            startPoint: .top,
+            endPoint: .bottom
         )
         let buttonColor = LinearGradient(
             colors: [
-                Color(red: 0.58, green: 0.15, blue: 0.8),
-                Color(red: 0.4, green: 0.15, blue: 0.6),
-                Color(red: 0.3, green: 0.15, blue: 0.95)
+                Color(red: 0.51, green: 0.2, blue: 0.8),
+                Color(red: 0.25, green: 0.15, blue: 0.75)
             ],
             startPoint: .topLeading,
-            endPoint: .bottomTrailing)
+            endPoint: .bottomTrailing
+        )
         
         var body: some View {
             VStack(alignment: .leading, spacing: 20) {
@@ -111,7 +112,6 @@ struct ContentView: View {
                 .cornerRadius(20, antialiased: true)
                 .background(
                     RoundedRectangle(cornerRadius: 20, style: .circular)
-                        .stroke(.black, lineWidth: 1)
                 )
                 .shadow(color: .black, radius: 5, x: 0, y: 5)
                 .animation(.easeInOut(duration: 1), value: isButtonTapped)
