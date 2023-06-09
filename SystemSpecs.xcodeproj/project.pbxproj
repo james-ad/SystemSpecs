@@ -15,6 +15,8 @@
 		7C52FA602A2ED7C8009BBD4C /* SystemSpecsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C52FA5F2A2ED7C8009BBD4C /* SystemSpecsUITests.swift */; };
 		7C52FA622A2ED7C8009BBD4C /* SystemSpecsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C52FA612A2ED7C8009BBD4C /* SystemSpecsUITestsLaunchTests.swift */; };
 		7C52FA6F2A2EDA21009BBD4C /* DataPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C52FA6E2A2EDA21009BBD4C /* DataPoint.swift */; };
+		7CD96FCB2A31662A007AA0E7 /* ProcessRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD96FCA2A31662A007AA0E7 /* ProcessRowView.swift */; };
+		7CD96FCD2A316724007AA0E7 /* PerformanceMetricsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD96FCC2A316724007AA0E7 /* PerformanceMetricsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		7C52FA5F2A2ED7C8009BBD4C /* SystemSpecsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemSpecsUITests.swift; sourceTree = "<group>"; };
 		7C52FA612A2ED7C8009BBD4C /* SystemSpecsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemSpecsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7C52FA6E2A2EDA21009BBD4C /* DataPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPoint.swift; sourceTree = "<group>"; };
+		7CD96FCA2A31662A007AA0E7 /* ProcessRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessRowView.swift; sourceTree = "<group>"; };
+		7CD96FCC2A316724007AA0E7 /* PerformanceMetricsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceMetricsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,8 @@
 			children = (
 				7C52FA442A2ED7C6009BBD4C /* SystemSpecsApp.swift */,
 				7C52FA462A2ED7C6009BBD4C /* ContentView.swift */,
+				7CD96FCC2A316724007AA0E7 /* PerformanceMetricsView.swift */,
+				7CD96FCA2A31662A007AA0E7 /* ProcessRowView.swift */,
 				7C52FA6E2A2EDA21009BBD4C /* DataPoint.swift */,
 				7C52FA482A2ED7C8009BBD4C /* Assets.xcassets */,
 				7C52FA4A2A2ED7C8009BBD4C /* Preview Content */,
@@ -262,6 +268,8 @@
 			files = (
 				7C52FA6F2A2EDA21009BBD4C /* DataPoint.swift in Sources */,
 				7C52FA472A2ED7C6009BBD4C /* ContentView.swift in Sources */,
+				7CD96FCB2A31662A007AA0E7 /* ProcessRowView.swift in Sources */,
+				7CD96FCD2A316724007AA0E7 /* PerformanceMetricsView.swift in Sources */,
 				7C52FA452A2ED7C6009BBD4C /* SystemSpecsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
