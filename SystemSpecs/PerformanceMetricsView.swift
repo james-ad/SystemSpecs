@@ -29,6 +29,10 @@ struct PerformanceMetricsView: View {
         endPoint: .bottomTrailing
     )
     
+    init() {
+        UIDevice.current.isBatteryMonitoringEnabled = true
+    }
+    
     func doSomething() {
         
         // TODO: Figure out what dynamic info can be gleaned from device and presented
@@ -49,6 +53,7 @@ struct PerformanceMetricsView: View {
             print("Physical CPU: \(hostInfo.physical_cpu)")
             print("Logical CPU: \(hostInfo.logical_cpu)")
             print("Max Memory: \(hostInfo.max_mem)")
+//            UIDevice.current.isBatteryMonitoringEnabled = true
             print("DA TING MON: \(UIDevice.current.batteryLevel * 100)")
             print("DA TING MON: \(cpuUsage)")
             print("DA TING MON: \(floor(Double(ProcessInfo().physicalMemory / 1000000000)))")
@@ -59,9 +64,9 @@ struct PerformanceMetricsView: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
-            ProcessRowView()
-            ProcessRowView()
-            ProcessRowView()
+            ProcessRowView(category: "Battery", readout: "\(UIDevice.current.batteryLevel * 100)%")
+            ProcessRowView(category: "", readout: "")
+            ProcessRowView(category: "", readout: "")
             Button() {
                 print("Inside button tapped")
             } label: {

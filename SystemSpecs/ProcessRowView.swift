@@ -8,17 +8,20 @@
 import SwiftUI
 
 struct ProcessRowView: View {
+    let category: String
+    let readout: String
+    
     var body: some View {
         HStack(alignment: .top, spacing: 15) {
             Image(systemName: "pc")
                 .imageScale(.large)
                 .font(.title)
             VStack(alignment: .leading, spacing: 4) {
-                Text("Hello")
+                Text(category)
                     .font(.title3)
                     .fontWeight(.bold)
                     .foregroundColor(.white)
-                Text("World")
+                Text(readout)
                     .foregroundColor(.gray)
             }
         }
@@ -27,6 +30,6 @@ struct ProcessRowView: View {
 
 struct SwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
-        ProcessRowView()
+        ProcessRowView(category: "", readout: "")
     }
 }
